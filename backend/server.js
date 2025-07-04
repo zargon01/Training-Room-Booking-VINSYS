@@ -6,7 +6,7 @@ import userRoutes from './routes/user.route.js';
 import roomRoutes from './routes/room.route.js';
 import bookingRoutes from './routes/booking.route.js';
 import mailRoutes from './routes/mail.route.js';
-import statsRoutes from './routes/stats.routes.js'; // ✅ Add this
+import statsRoutes from './routes/stats.routes.js';
 
 dotenv.config();
 
@@ -19,9 +19,9 @@ app.use("/api/users", userRoutes);
 app.use("/api/rooms", roomRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/mail", mailRoutes);
-app.use("/api/stats", statsRoutes); // ✅ Register the route
+app.use("/api/stats", statsRoutes);
 
 app.listen(PORT, () => {
   connectDB();
-  console.log('Server started on http://localhost:' + PORT);
+  console.log('Server started on:' + PORT);
 });
