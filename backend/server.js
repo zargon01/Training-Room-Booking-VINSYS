@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db.js';
+import cors from 'cors';
 
 import userRoutes from './routes/user.route.js';
 import roomRoutes from './routes/room.route.js';
