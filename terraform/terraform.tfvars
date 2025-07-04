@@ -1,0 +1,6 @@
+aws_region          = "us-east-1"
+frontend_bucket_name = "vinsys-booking-frontend-123456"
+ec2_key_pair_name   = "your-ec2-keypair-name"
+allowed_ssh_ip      = "YOUR.IP.ADD.RESS/32"
+mongo_uri           = "mongodb+srv://<user>:<pass>@cluster0.mongodb.net/?retryWrites=true&w=majority"
+jwt_secret          = "your_jwt_secret_here"
