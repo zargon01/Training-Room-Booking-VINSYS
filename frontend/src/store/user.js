@@ -30,7 +30,7 @@ export const useUserStore = create((set, get) => ({
     const token = get().token;
     set({ loading: true, error: null });
     try {
-      const res = await fetch('/api/users', {
+      const res = await fetch('http://52.66.178.111:5000/api/users', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -50,7 +50,7 @@ export const useUserStore = create((set, get) => ({
     }
     set({ loading: true, error: null });
     try {
-      const res = await fetch('/api/users', {
+      const res = await fetch('http://52.66.178.111:5000/api/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newUser),
@@ -71,7 +71,7 @@ export const useUserStore = create((set, get) => ({
     const token = get().token;
     set({ loading: true, error: null });
     try {
-      const res = await fetch(`/api/users/${userId}`, {
+      const res = await fetch(`http://52.66.178.111:5000/api/users/${userId}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -89,7 +89,7 @@ export const useUserStore = create((set, get) => ({
 
   showUser: async (userId) => {
     const token = get().token;
-    const res = await fetch(`/api/users/${userId}`, {
+    const res = await fetch(`http://52.66.178.111:5000/api/users/${userId}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await res.json();
@@ -99,7 +99,7 @@ export const useUserStore = create((set, get) => ({
   updateUser: async (userId, updateUser) => {
     const token = get().token;
     try {
-      const res = await fetch(`/api/users/${userId}`, {
+      const res = await fetch(`http://52.66.178.111:5000/api/users/${userId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -130,7 +130,7 @@ export const useUserStore = create((set, get) => ({
 
   loginUser: async (email, password) => {
     try {
-      const res = await fetch('/api/users/login', {
+      const res = await fetch('http://52.66.178.111:5000/api/users/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
