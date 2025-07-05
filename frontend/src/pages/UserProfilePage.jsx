@@ -68,7 +68,7 @@ export default function UserProfilePage() {
   const handleEditSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`/api/users/${id}`, {
+      const res = await fetch(`http://52.66.178.111:5000/api/users/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ export default function UserProfilePage() {
     }
 
     try {
-      const res = await fetch(`/api/users/${id}/password`, {
+      const res = await fetch(`http://52.66.178.111:5000/api/users/${id}/password`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

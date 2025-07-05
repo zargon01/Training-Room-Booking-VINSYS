@@ -29,7 +29,10 @@ export default function UserDashboard() {
       setLoading(true);
       const res = await axios.get('/bookings');
       const now = new Date();
-      const userBookings = res.data.data.filter(b => b.userId._id === user._id);
+const userBookings = res.data.data.filter(b => {
+  const bookingUserId = typeof b.userId === 'string' ? b.userId : b.userId._id;
+  return bookingUserId === user._id;
+});
 
       const active = userBookings.filter(b =>
         b.status === 'approved' &&
