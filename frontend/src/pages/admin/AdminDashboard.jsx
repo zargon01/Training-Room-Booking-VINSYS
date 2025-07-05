@@ -327,7 +327,7 @@ const AdminDashboard = () => {
           <div className="flex flex-wrap gap-3">
             <QuickAction title="Manage Bookings" icon={Calendar} to="/bookings" />
             <QuickAction title="Manage Rooms" icon={Home} to="/rooms" />
-            <QuickAction title="Manage Users" icon={Users} to="/admin/users" />
+            <QuickAction title="Manage Users" icon={Users} to="http://52.66.178.111:5000/admin/users" />
             <QuickAction title="Approved Bookings" icon={Eye} to="/approvals" />
             <button
               onClick={() => setShowApprovalsPopup(true)}
