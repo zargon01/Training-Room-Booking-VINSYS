@@ -28,7 +28,7 @@ app.use("/api/bookings", bookingRoutes);
 app.use("/api/mail", mailRoutes);
 app.use("/api/stats", statsRoutes);
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   connectDB();
   console.log('Server started on:' + PORT);
 });

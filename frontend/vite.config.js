@@ -23,13 +23,13 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: '../backend/dist',
+    outDir: '../dist',
     emptyOutDir: true,
   },
   server: {
     proxy: {
       '/api': {
-        target: 'http://13.234.140.163:5000',
+        target: 'http://localhost:5000',
         changeOrigin: true,
       },
     },
