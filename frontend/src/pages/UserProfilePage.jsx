@@ -29,7 +29,7 @@ export default function UserProfilePage() {
     const fetchUser = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`/api/users/${id}`, {
+        const res = await fetch(`http://52.66.178.111:5000/api/users/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           }
