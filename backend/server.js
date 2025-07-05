@@ -20,7 +20,7 @@ app.use(cors({
     'http://localhost:5173',
     'http://training.room.booking.s3-website.ap-south-1.amazonaws.com',
   ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE',],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
 }));
