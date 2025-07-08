@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Eye, EyeOff, Mail, Lock, User, Building } from 'lucide-react';
-import '../styles/SignupPopup.css';
+import '../styles/SignUpPopUp.css';
 import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/auth';
 import { toast } from 'react-toastify';
